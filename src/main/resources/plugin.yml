@@ -1,0 +1,6 @@
+name: DZJoinManager
+version: '${project.version}'
+main: ru.dercec.plugin.dzjoinmanager.DZJoinManager
+api-version: '1.16'
+commands:
+  dzjoinmanager:

@@ -1,0 +1,111 @@
+#    ██████╗ ███████╗██████╗ ██████╗  ██████╗ ██████╗ ██╗   ██╗ ██████╗████████╗
+#    ██╔══██╗╚══███╔╝██╔══██╗██╔══██╗██╔═══██╗██╔══██╗██║   ██║██╔════╝╚══██╔══╝
+#    ██║  ██║  ███╔╝ ██████╔╝██████╔╝██║   ██║██║  ██║██║   ██║██║        ██║
+#    ██║  ██║ ███╔╝  ██╔═══╝ ██╔══██╗██║   ██║██║  ██║██║   ██║██║        ██║
+#    ██████╔╝███████╗██║     ██║  ██║╚██████╔╝██████╔╝╚██████╔╝╚██████╗   ██║
+#    ╚═════╝ ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝  ╚═════╝   ╚═╝
+#
+#    JoinManager
+#
+#
+#  Обозначения:
+#   {player-name} - Ник зашедшего игрока
+#
+#  Плагин поддерживает Hex цвета!
+#   Сайт - https://www.birdflop.com/resources/rgb/
+#
+#  Пермишины:
+#   dzjoinmanager.reload - (/dzjoinmanager reload)
+
+
+
+#Для тех, кто зашёл на сервер впервые
+first-join:
+  #Писать команды для игрока от имени консоли
+  cmd-commands:
+    #Включить/Выключить команды при заходе (true/false)
+    enable: true
+    #Команды для консоли
+    commands:
+      #Выдаст игроку 5 алмазов за то что он на сервере впервые
+      - 'give {player-name} diamond 5'
+      #Выдаст игроку 16 стейков за то что он на сервере впервые
+      - 'give {player-name} cooked_beef 16'
+  messages:
+    #Включить/Выключить сообщения в чате (true/false)
+    enable: true
+    #Сообщения в чате
+    message:
+      - '&#ADFDD3Приветствуем&f тебя на сервере &#ADFDD3НАЗВАНИЕ !'
+      - '&#ADFDD3Наши ссылки:'
+      - ' &#ADFDD3ᴅɪsᴄᴏʀᴅ:&f dsc.gg/dzproduct'
+      - ' &#ADFDD3ᴠᴋᴏɴᴛᴀᴋᴛᴇ:&f vk.com/dzproduct'
+      - ' &#ADFDD3ᴛᴇʟᴇɢʀᴀᴍ:&f t.me/dzproduct'
+      - ''
+      - '&#ADFDD3Полезности:'
+      - ' &#ADFDD3/help - &fРасскажет вам немного'
+      - '  &fо &#ADFDD3сервере&f и его &#ADFDD3механиках&f!'
+  sound-on-join:
+    #Включить/Выключить звук при заходе (true/false)
+    enable: true
+    #Звук
+    sound: BLOCK_BEACON_ACTIVATE
+  title:
+    #Включить/Выключить title при заходе (true/false)
+    enable: true
+    #Верхняя часть Title
+    Header: '&#ADFDD3Привет!'
+    #Нижняя часть Title
+    Footer: '&7Мы используем SimpleVoice!'
+  actionbar:
+    #Включить/Выключить actionbar при заходе (true/false)
+    enable: true
+    #Сообщение около инвентаря
+    message: '&fСпасибо что посетили наш сервер!'
+
+on-join:
+  messages:
+    #Включить/Выключить сообщения в чате (true/false)
+    enable: true
+    #Сообщения в чате
+    message:
+      - '&#ADFDD3И снова привет!'
+      - ''
+      - '&#ADFDD3Наши ссылки:'
+      - ' &#ADFDD3ᴅɪsᴄᴏʀᴅ:&f dsc.gg/dzproduct'
+      - ' &#ADFDD3ᴠᴋᴏɴᴛᴀᴋᴛᴇ:&f vk.com/dzproduct'
+      - ' &#ADFDD3ᴛᴇʟᴇɢʀᴀᴍ:&f t.me/dzproduct'
+      - ''
+  title:
+    #Включить/Выключить title при заходе (true/false)
+    enable: true
+    #Верхняя часть Title
+    Header: '&#ADFDD3С Возвращением!'
+    #Нижняя часть Title
+    Footer: '&7Где же ты был?..'
+  sound-on-join:
+    #Включить/Выключить звук при заходе (true/false)
+    enable: true
+    #Звук
+    sound: BLOCK_BEACON_ACTIVATE
+  actionbar:
+    #Включить/Выключить actionbar при заходе (true/false)
+    enable: true
+    #Сообщение около инвентаря
+    message: '&fС возращением!'
+
+settings:
+  title-settings: #Настройка Title'ов
+    Fade_In: 5 #СКОЛЬКО В ТИКАХ БУДЕТ ПРОЯВЛЯТЬСЯ TITLE
+    Stay: 30 #СКОЛЬКО В ТИКАХ БУДЕТ ОТОБРАЖАТЬСЯ TITLE
+    Fade_Out: 5 #СКОЛЬКО В ТИКАХ БУДЕТ УГАСАТЬ TITLE
+  other-settings:
+    #Сообщение когда у игрока нету прав на использование /joinmanager reload
+    no-permission:
+      - 'Такой команды &#ADFDD3не существует&f или'
+      - 'у вас &#ADFDD3нету прав&f для её использования!'
+    successfully-rebooted:
+      - '&fКонфиг &#ADFDD3DZJoinManager&f был успешно &#ADFDD3перезагружен&f!'
+      - '&fХорошего дня! &#ADFDD3❤'
+
+
